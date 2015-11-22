@@ -1,16 +1,20 @@
 from validate_email import validate_email
 import sys
-# List of configurations
-# {first_name}{last_initial}
+import os
 
 # Holds a list of potential configurations for an email address
 # ie {first_name}{last_initial} would be anshulj for anshul jain
+
+
+
 email_configs_file= "configs.txt"
 email_configs = []
 
 def load_configs():
   global email_configs
-  with open(email_configs_file) as f:
+  this_dir, this_filename = os.path.split(__file__)
+  path = os.path.join(this_dir, email_configs_file)
+  with open(path) as f:
     # use split lines to ignore \n char at end of lines
     email_configs = f.read().splitlines()
     return email_configs
@@ -38,7 +42,7 @@ def find_email(first_name, last_name, company_domain):
 
 def main():
   if len(sys.argv) < 4:
-    #print "ERROR: find_email expects 4 arguments, only " + str(len(sys.argv)) + " received"
+    print "ERROR: find_email expects 3 arguments, only " + str(len(sys.argv)-1) + " received"
     sys.exit(1)
 
   load_configs()
