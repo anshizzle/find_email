@@ -36,7 +36,7 @@ def find_email(first_name, last_name, company_domain):
     #print "email not valid"
   return None
 
-if __name__ == "__main__":
+def main():
   if len(sys.argv) < 4:
     #print "ERROR: find_email expects 4 arguments, only " + str(len(sys.argv)) + " received"
     sys.exit(1)
@@ -48,3 +48,6 @@ if __name__ == "__main__":
     print email
   else:
     print "email not found"
+
+if __name__ == "__main__":
+  main()

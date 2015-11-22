@@ -1,0 +1,3 @@
+[console_scripts]
+find_email = find_email.find_email:main
+
