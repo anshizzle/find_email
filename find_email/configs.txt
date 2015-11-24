@@ -3,4 +3,7 @@
 {first_name}{last_initial}
 {first_name}.{last_name}
 {first_initial}{last_initial}
+{last_name}{first_name}
+{last_name}.{first_name}
+{last_name}{first_initial}
 {first_name}_{last_name}
