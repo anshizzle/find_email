@@ -14,6 +14,3 @@ input file is in form
 ```
 Companyname, Full name, , Domain
 ```
-
-TODO:
-- Be able to load list of names from file
