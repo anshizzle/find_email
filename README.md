@@ -7,10 +7,10 @@ cd find_email
 python setup.py install
 find_email john doe company.com
 ```
-OR 
+OR
 ```find_email input_file.csv outputfile.csv```
 
 input file is in form
 ```
-Companyname, Full name, , Domain
+company_name    funding    website    first_name    last_name    title    email
 ```
