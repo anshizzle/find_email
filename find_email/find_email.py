@@ -47,9 +47,11 @@ def read_from_file(input, output):
     with open(output, 'wb') as csvof:
       of = csv.writer(csvof, delimiter=',')
       for row in leads:
-        first_name, last_name = row[1].split()
-        domain = row[4]
-        row[3] = find_email(first_name, last_name, domain)
+        first_name = row[3]
+        last_name = row[4]
+
+        domain = row[2]
+        row[6] = find_email(first_name, last_name, domain)
         of.writerow(row)
         print first_name + " " + last_name + " from " + row[0] + " found"
 
