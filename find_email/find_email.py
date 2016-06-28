@@ -55,6 +55,9 @@ def read_from_file(input, output):
             row[6] = find_email(first_name, last_name, domain)
             of.writerow(row)
             print first_name + " " + last_name + " from " + row[0] + " found"
+        else:
+            of.writerow(row)
+
 
   print "Done getting emails"
 
